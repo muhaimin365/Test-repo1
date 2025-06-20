@@ -27,6 +27,5 @@ if __name__ == "__main__":
     except NagNumError as e:
         print(f"Caught an error in the main script: {e}")
     except Exception as e:
-        print("An unexpected error occurred.")
-
+        e.returnError()
 
