@@ -1,1 +1,2 @@
 print ("Muhaimin")
+print ("Hi")
