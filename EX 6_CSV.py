@@ -8,7 +8,7 @@ product_data = [
     {"id":"A4", "name":"monitor", "price":"8000", "stock":70}
 ]
 
-csv_file_name = "product.csv"
+csv_file_name = "product1.csv"
 
 fieldnames = ["id","name","price","stock"]
 
