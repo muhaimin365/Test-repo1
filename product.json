@@ -1,0 +1,29 @@
+{
+    "product": [
+        {
+            "id": "A1",
+            "name": "leptop",
+            "price": "100000",
+            "stock": 10
+        },
+        {
+            "id": "A2",
+            "name": "mouse",
+            "price": "1500",
+            "stock": 50
+        },
+        {
+            "id": "A3",
+            "name": "keyboard",
+            "price": "2000",
+            "stock": 250
+        },
+        {
+            "id": "A4",
+            "name": "monitor",
+            "price": "8000",
+            "stock": 70
+        }
+    ],
+    "last_updated": "2025-06-24 23:21:21"
+}
