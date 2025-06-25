@@ -1,3 +1,5 @@
+import csv
+
 inventory=[
     {"id":"p001", "name":"leptop", "price":"100000", "stock":10},
     {"id":"p002", "name":"mouse", "price":"1500", "stock":50},
@@ -37,4 +39,26 @@ def get_low_stock_product(threshold):
             low_stock_product.append(product['name'])
     return low_stock_product
 
+csv_file_name = "product1.csv"
+fieldnames = ["id","name","price","stock"]
+
+if __name__ == "__main__":
+
+    try:
+        Low_Stock = get_low_stock_product(100)
+        print(f"You entered a low stock product: {Low_Stock}")
+        with open(csv_file_name, mode='w',newline='') as csv_file:
+            writer = csv.DictWriter(csv_file,fieldnames=fieldnames)
+            #write the header Row
+            writer.writeheader()
+            print("CSV Header written.")
+            #write all product data rows
+            writer.writerows(inventory)
+            print(f"Successfully wrote{len(inventory)} product records to '{csv_file_name}' ")
+
+    except IOError as e:
+        print(f"Error:  Couldn't write to the file'{csv_file_name}'.{e}")
+
+    except Exception as e:
+        print(f"Unexcpected Eroor Occured:{e}")
 
